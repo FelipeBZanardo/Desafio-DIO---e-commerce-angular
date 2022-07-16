@@ -1,0 +1,11 @@
+<div class="row">
+    <app-product-filter (filter)="valoresFiltro($event)"></app-product-filter>
+</div>
+<div class="row my-4">
+    <div class="col-md-4" *ngFor="let livro of productsFilter">
+        <app-product-item [livro]="livro"></app-product-item>
+    </div>
+</div>
+
+
+

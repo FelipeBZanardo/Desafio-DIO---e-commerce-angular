@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <div class="p-2">Filtrar preços</div>
+        <div class="d-flex flex-row justify-content-center align-items-center">
+            <div class="p-2">de:</div>
+            <input #min type="number" placeholder="R$" (input)="filterMin(min.value)">
+            <div class="p-2">para:</div>
+            <input #max type="number" placeholder="R$" (input)="filterMax(max.value)">
+        </div>
+    </div>
+</div>

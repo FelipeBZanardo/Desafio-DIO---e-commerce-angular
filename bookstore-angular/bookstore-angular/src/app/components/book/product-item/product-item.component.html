@@ -1,0 +1,21 @@
+<div class="card shadow-sm">
+    <img class="bd-placeholder-img card-img-top" height="500px" width="100px" src="{{ 'assets/images/' + livro.img }}">
+    <div class="card-body">
+      <p class="card-text">{{ livro.name }}</p>
+      <p class="card-text">{{ livro.category }}</p>
+      <p class="card-text">{{ livro.quantity }}</p>
+      <p class="card-text">{{ (livro.price)/100 | currency:'BRL' }}</p>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="btn-group">
+          <button type="button" class="btn btn-sm btn-primary">Comprar</button>
+          <button type="button" class="btn btn-sm btn-outline-secondary" (click)="exibirDetalhes()">Detalhes</button>
+        </div>
+      </div>
+      <div *ngIf="detalhes" class="col">
+        <div class="alert alert-primary" role="alert">
+          {{ livro.details }}
+        </div>
+      </div>
+    </div>
+  </div>
